@@ -115,6 +115,13 @@ footer .data a > i{
     width: 100px;
     height: 90px;
   }
+
+  .texto button:hover{
+    width: 60%;
+    background-color: #052c65;
+    color: white;
+    transition: 0.6s;
+  }
 }
 
 /* media query telefonos pantallas horizontales */

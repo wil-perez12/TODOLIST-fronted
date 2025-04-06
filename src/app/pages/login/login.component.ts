@@ -45,7 +45,10 @@ export class LoginComponent {
 
     this.AccesoService.Login(objeto).subscribe({
       next:(data) =>{
-      this.ToastService.close();
+
+        setTimeout(() => {
+          this.ToastService.close();
+        }, 3000);
 
         if (data.succes) {
           this.ToastService.showSuccess("Signed in successfully");
