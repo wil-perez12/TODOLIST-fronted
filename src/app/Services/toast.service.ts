@@ -37,7 +37,7 @@ export class ToastService {
       title: message,
       allowOutsideClick: false,
       didOpen: () => {
-        Swal.showLoading();
+        Swal.showLoading(null);
       }
     });
   }
