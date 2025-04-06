@@ -7,14 +7,14 @@
   <form  [formGroup]="formEditar" class="d-flex flex-column justify-content-center ">
 
     <div class="input-ancho mb-3 mt-3">
-      <label for="exampleInputEmail1" class="form-label">Titulo</label>
+      <label for="Titulo" class="form-label">Titulo</label>
       <input [ngClass]="{'is-invalid' : hasError('Titulo','required')}"
       type="text" class="form-control" id="Titulo"  formControlName="Titulo">
       <div class="text-danger mt-2" *ngIf="hasError('Titulo', 'required')">Actualiza el titulo o pon el anterior</div>
     </div>
 
     <div class="input-ancho mb-3">
-      <label for="exampleInputEmail1" class="form-label">Descripción</label>
+      <label for="Descripcion" class="form-label">Descripción</label>
       <input [ngClass]="{'is-invalid' : hasError('Descripcion','required')}"
       type="text" class="form-control" id="Descripcion" formControlName="Descripcion">
       <div class="text-danger mt-2" *ngIf="hasError('Descripcion', 'required')">Actualiza la descripción o pon la anterior</div>

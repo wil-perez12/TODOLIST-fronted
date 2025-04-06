@@ -5,7 +5,7 @@
 
     <h4 class="text-center">Create Account</h4>
     <div class="input-ancho mb-3">
-      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <label for="Nombre" class="form-label">Nombre</label>
       <input [ngClass]="{'is-invalid': hasError('Nombre', 'required') || hasError('Nombre', 'minlength')}"
       placeholder="Ingrese su nombre"
       type="text" class="form-control" id="Nombre" formControlName="Nombre">
@@ -14,7 +14,7 @@
     </div>
 
     <div class="input-ancho mb-3">
-      <label for="exampleInputEmail1" class="form-label">Apellido</label>
+      <label for="Apellido" class="form-label">Apellido</label>
       <input  [ngClass]="{'is-invalid': hasError('Apellido', 'required') || hasError('Apellido', 'minlength')}"
       placeholder="Ingrese su apellido"
       type="text" class="form-control" id="Apellido" formControlName="Apellido">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="input-ancho mb-3">
-      <label for="exampleInputEmail1" class="form-label">Correo</label>
+      <label for="Correo" class="form-label">Correo</label>
       <input  [ngClass]="{'is-invalid': hasError('Correo', 'required') || hasError('Correo', 'email')}"
       placeholder="Ingrese correo electrónico"
       type="email" class="form-control" id="Correo" formControlName="Correo">
@@ -34,7 +34,7 @@
     </div>
 
     <div class="input-ancho mb-3 ">
-      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <label for="Contrasena" class="form-label">Contraseña</label>
       <input  [ngClass]="{'is-invalid': hasError('Contrasena', 'required') || hasError('Contrasena', 'minlength')}"
       placeholder="Ingrese Contraseña"
       type="password" class="form-control" id="Contrasena" formControlName="Contrasena">
