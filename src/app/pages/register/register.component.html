@@ -39,7 +39,7 @@
       placeholder="Ingrese Contraseña"
       type="password" class="form-control" id="Contrasena" formControlName="Contrasena">
       <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'required')">Contraseña requerida</div>
-      <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'minlength')">La contraseña debe tener minimo 8 caracteres</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'minlength')">La contraseña debe tener minimo 5 caracteres</div>
     </div>
 
     <button type="submit" class="btn" (click)="register()">Registrar</button>
