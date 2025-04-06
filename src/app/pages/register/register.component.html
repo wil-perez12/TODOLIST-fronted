@@ -1,0 +1,50 @@
+<!-- algunos estilos de bootstrap y fontawesome -->
+<div class="contenedor d-flex justify-content-around">
+<!-- Formulario de registro-->
+  <form [formGroup]="registerForm"  class="d-flex flex-column justify-content-center">
+
+    <h4 class="text-center">Create Account</h4>
+    <div class="input-ancho mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input [ngClass]="{'is-invalid': hasError('Nombre', 'required') || hasError('Nombre', 'minlength')}"
+      placeholder="Ingrese su nombre"
+      type="text" class="form-control" id="Nombre" formControlName="Nombre">
+      <div class="text-danger mt-2" *ngIf="hasError('Nombre', 'required')">Nombre requerido</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Nombre', 'minlength')">El nombre debe tener minimo 3 letras</div>
+    </div>
+
+    <div class="input-ancho mb-3">
+      <label for="exampleInputEmail1" class="form-label">Apellido</label>
+      <input  [ngClass]="{'is-invalid': hasError('Apellido', 'required') || hasError('Apellido', 'minlength')}"
+      placeholder="Ingrese su apellido"
+      type="text" class="form-control" id="Apellido" formControlName="Apellido">
+      <div class="text-danger mt-2" *ngIf="hasError('Apellido', 'required')">Apellido requerido</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Apellido', 'minlength')">El apellido debe tener minimo 3 letras</div>
+    </div>
+
+    <div class="input-ancho mb-3">
+      <label for="exampleInputEmail1" class="form-label">Correo</label>
+      <input  [ngClass]="{'is-invalid': hasError('Correo', 'required') || hasError('Correo', 'email')}"
+      placeholder="Ingrese correo electrónico"
+      type="email" class="form-control" id="Correo" formControlName="Correo">
+      <div class="text-danger mt-2" *ngIf="hasError('Correo', 'required')">Email requerido</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Correo', 'email')">Email formato invalido.</div>
+      <div class="text-danger mt-2" *ngIf="isBadRequest">{{mensaje}}</div>
+
+    </div>
+
+    <div class="input-ancho mb-3 ">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input  [ngClass]="{'is-invalid': hasError('Contrasena', 'required') || hasError('Contrasena', 'minlength')}"
+      placeholder="Ingrese Contraseña"
+      type="password" class="form-control" id="Contrasena" formControlName="Contrasena">
+      <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'required')">Contraseña requerida</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'minlength')">La contraseña debe tener minimo 8 caracteres</div>
+    </div>
+
+    <button type="submit" class="btn" (click)="register()">Registrar</button>
+
+    <p class="mt-4">¿Ya estas registrado? <a routerLink="/login">Iniciar Sesión</a></p>
+  </form>
+  <img src="/registro-img.svg" class="img-fluid float-start mt-5" alt="imagen de mujer registrandose">
+</div>

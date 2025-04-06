@@ -1,0 +1,96 @@
+/* ancho al select */
+.input-ancho input {
+  width: 25rem;
+}
+
+/* animacion a los botones del formlario */
+.contenedor form > button{
+  width: 25rem;
+  background-color:#cfe2ff;
+  color: black;
+  transition: 0.8s;
+}
+
+.contenedor form > button:hover{
+  background-color:black;
+  color: white;
+  transition: 0.8s;
+}
+
+/* cotenedor principal */
+.contenedor {
+  background-color:#a8dadc;
+  height: 100vh;
+}
+
+.contenedor  .img-fluid {
+  width: 500px;
+  height: 500px;
+}
+
+.contenedor h4 {
+  color:#7209b7;
+  font-size: 2rem;
+}
+
+
+/* media querys en telefonos */
+@media only screen and (max-width: 600px) {
+
+  .contenedor{
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+  }
+
+  .contenedor  .img-fluid {
+    width: 200px;
+    height: 150px;
+    align-items: center;
+  }
+  .contenedor .input-ancho > input{
+    width:95%;
+    margin-left:10px;
+  }
+
+  .contenedor form .btn{
+    width:95vw;
+    margin-left:3px;
+  }
+}
+
+/* media query telefonos pantallas horizontales */
+@media (max-height: 500px) and (min-width: 700px) {
+
+  .contenedor{
+    height: 100%;
+  }
+
+  .contenedor  .img-fluid {
+    width: 250px;
+    height: 200px;
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  .contenedor form{
+    margin-top: 30px;
+  }
+}
+
+
+/* media query tablets */
+@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+  .contenedor{
+    height: 100vh;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: -20px;
+  }
+
+  .contenedor  .img-fluid {
+    width: 350px;
+    height: 300px;
+  }
+}
+

@@ -1,0 +1,133 @@
+/* primer contenedor. estilos*/
+.container {
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.container > .img-fluid{
+  height: 350px;
+  width: 550px;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+/* boton primer contenedor*/
+.texto button{
+  width: 50%;
+  background-color:#cfe2ff;
+  color:black;
+  border-radius: 5px;
+  transition: 0.6s;
+}
+
+/* animacion a boton del primer contenedor*/
+.texto button:hover{
+  width: 55%;
+  background-color: #052c65;
+  color: white;
+  transition: 0.6s;
+}
+
+/* segundo contenedor*/
+.second-div{
+  padding: 20px;
+  background-color: #cfe2ff;
+}
+
+.second-div > .img-fluid{
+  height: 350px;
+  width: 550px;
+  margin-top:40px;
+}
+/* h3 del segundo contenedor*/
+.second-div h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* imagenes del tercer contenedor*/
+.third-div > img{
+  margin-bottom: 2rem;
+  width: 250px;
+  height: 150px;
+  transition: 0.6s;
+}
+
+/* tercer contenedor  con tres imagenes paralelas*/
+.parent-div-img{
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+/* animacion a las imagens del tercer contenedor*/
+.third-div:hover  img {
+  transform: scale(1.08);
+  transition: 0.3s;
+}
+
+footer{
+  padding: 20px;
+  background-color: #0a1128;
+  color: white;
+}
+
+footer .data a > i{
+  font-size: 1.3rem;
+}
+
+/* media querys en telefonos */
+@media only screen and (max-width: 600px) {
+
+  .container{
+    flex-direction: column-reverse;
+  }
+
+  .container > .img-fluid{
+    height: 200px;
+    width: 400px;
+  }
+
+  .second-div{
+    height: 45vh;
+  }
+
+  .second-div > .img-fluid{
+    height: 200px;
+    width: 500px;
+    margin-top:60px;
+    margin-left: 130px;
+  }
+
+  .second-div .li-hidden{
+    visibility: hidden;
+  }
+
+  .second-div .texto{
+    visibility: hidden;
+  }
+
+
+  .third-div > img{
+    margin-left: -10px;
+    margin-right:-10px;
+    width: 100px;
+    height: 90px;
+  }
+}
+
+/* media query telefonos pantallas horizontales */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+  .container {
+    flex-direction: column-reverse;
+  }
+}
+
+/* media query tablets */
+@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}

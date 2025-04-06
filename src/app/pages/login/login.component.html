@@ -1,0 +1,31 @@
+<!-- algunos estilos de bootstrap y fontawesome -->
+<div [formGroup]="loginForm" class="contenedor d-flex justify-content-around">
+  <!-- formulario-->
+  <form class="d-flex flex-column justify-content-center">
+    <h3 class="text-center">Welcome Back!</h3>
+    <h6 class="text-center mt-2">Ingresa tus credenciales</h6>
+
+    <div class="input-ancho mb-3 mt-2">
+      <label for="exampleInputEmail1" class="form-label">Correo</label>
+      <input  [ngClass]="{'is-invalid': hasError('Correo', 'required') || hasError('Correo', 'email')}"
+      placeholder="Ingrese correo electrónico"
+      type="email" class="form-control" id="Correo" formControlName="Correo">
+      <div class="text-danger mt-2" *ngIf="hasError('Correo', 'required')">Email requerido</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Correo', 'email')">Email formato invalido.</div>
+    </div>
+
+    <div class="input-ancho mb-3 ">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input  [ngClass]="{'is-invalid': hasError('Contrasena', 'required') || hasError('Contrasena', 'minlength')}"
+      placeholder="Ingrese Contraseña"
+      type="password" class="form-control" id="Contrasena" formControlName="Contrasena">
+      <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'required')">Contraseña requerida</div>
+      <div class="text-danger mt-2" *ngIf="hasError('Contrasena', 'minlength')">La contraseña debe tener minimo 8 caracteres</div>
+    </div>
+
+    <button type="submit" class="btn" (click)="Login()">Iniciar Sesión</button>
+    <p class="mt-4">¿No tienes cuenta? <a routerLink="/register">Registrate</a></p>
+  </form>
+
+  <img src="/login-img.svg" class="img-fluid float-start mt-5" alt="imagen de mujer al lado de un telefono">
+</div>

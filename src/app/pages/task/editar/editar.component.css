@@ -1,0 +1,15 @@
+/* animacion a los botones de editar y volver */
+.container button{
+  transition: 0.5s;
+}
+
+.container button:hover{
+  background-color: #f8f9fa;
+  color: #007bff;
+  border: 1px solid #007bff;
+  transition: 0.8s;
+}
+
+.container{
+  width: 60%;
+}

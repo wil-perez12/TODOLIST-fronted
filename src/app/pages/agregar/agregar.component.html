@@ -1,0 +1,41 @@
+<!-- algunos estilos de bootstrap y fontawesome -->
+<div class="container d-flex flex-column mt-5">
+  <h4 class="mt-5">Manten tus actividades organizadas!</h4>
+  <!-- formulario -->
+  <form [formGroup]="formAgregar" class="d-flex flex-column justify-content-center">
+    <div class="input-ancho mb-3 mt-4">
+      <label for="exampleInputEmail1" class="form-label">Titulo</label>
+      <input [ngClass]="{'is-invalid' : hasError('Titulo','required')}"
+      placeholder="Ej: Estudiar Mátematicas"
+      type="text" class="form-control" id="Titulo"  formControlName="Titulo">
+      <div class="text-danger mt-2" *ngIf="hasError('Titulo', 'required')">Titulo requerido</div>
+    </div>
+
+    <div class="input-ancho mb-3">
+      <label for="exampleInputEmail1" class="form-label">Descripción</label>
+      <input [ngClass]="{'is-invalid' : hasError('Descripcion','required')}"
+      placeholder="Ej: estudiar en la noche los numeros impares"
+      type="text" class="form-control" id="Descripcion" formControlName="Descripcion">
+      <div class="text-danger mt-2" *ngIf="hasError('Descripcion', 'required')">Descripcion requerida</div>
+    </div>
+
+    <label for="Estado">Estados</label>
+    <select
+      [ngClass]="{'is-invalid' : hasError('Estado', 'required')}" class="form-select" id="Estado"
+      formControlName="Estado">
+      <option value="pendiente">Pendiente</option>
+      <option value="proceso">Proceso</option>
+      <option value="completada">Completada</option>
+      <option value="cancelada">Cancelada</option>
+    </select>
+    <div class="text-danger mt-2" *ngIf="hasError('Estado', 'required')">Estado requerido</div>
+
+    <div class="btn-flex d-flex justify-content-center gap-2">
+      <button type="submit" class="btn bg-info-subtle mt-3 w-25 text-primary" routerLink="/task">
+        <i class="fa-solid fa-arrow-left fs-4 text"></i>
+      </button>
+      <button type="submit" class="btn bg-info-subtle mt-3 w-100" (click)="AgregarTarea()">Agregar</button>
+    </div>
+  </form>
+</div>
+

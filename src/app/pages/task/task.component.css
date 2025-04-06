@@ -1,0 +1,70 @@
+/* Contenedor de herramientas */
+.contenedor-agregar{
+  width: 20%;
+  text-align: center;
+}
+
+.contenedor-agregar a{
+  transition: 0.1s;
+}
+
+.contenedor-agregar a:hover {
+    transform: scale(1.08);
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+    transition: 0.1s;
+}
+
+.table button{
+  margin-right: 3px;
+  width: 60%;
+  color: black;
+}
+
+.show-message{
+  color: #0096c7;
+}
+
+/* media querys en telefonos */
+@media only screen and (max-width: 600px) {
+  .contnedor-parent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contnedor-parent .table-responsive {
+    width: 100%;
+    margin-top: 5px;
+    overflow-x: hidden;
+  }
+
+  .contnedor-parent .table-responsive table {
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+
+  .table button {
+    width: 85%;
+  }
+
+  .contenedor-agregar{
+    width: 50%;
+  }
+
+}
+
+ /* media query telefonos pantallas horizontales */
+@media (max-height: 500px) and (min-width: 700px) {
+  .table button {
+    width: 100%;
+  }
+
+}
+

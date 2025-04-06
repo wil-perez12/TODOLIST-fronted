@@ -1,0 +1,28 @@
+.contenedor{
+  background-color: #cfe2ff;
+  padding: 10px;
+}
+.nav-link{
+  color: black;
+}
+
+.logo-hover :hover{
+  cursor: pointer;
+  color: #00b4d8;
+  transition: 0.5s;
+}
+.navbar-nav :hover{
+  color: #00b4d8;
+  transition: 0.5s;
+}
+
+footer{
+  background-color: #0a1128;
+  color: white;
+}
+
+@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait){
+  .contenedor{
+    padding: 25px;
+  }
+}
